@@ -1,0 +1,164 @@
+version: "3.1"
+
+stories:
+
+- story: inscripciones path 1
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: inscripcionesMenu
+  - action: utter_inscripcionesMenu
+  - intent: inscripciones
+  - action: utter_inscripciones
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: inscripciones path 2
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: inscripcionesMenu
+  - action: utter_inscripcionesMenu
+  - intent: requisitosDeInscripcion
+  - action: utter_requisitosDeInscripcion
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: turnos path 1
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: turnosMenu
+  - action: utter_turnosMenu
+  - intent: turnoDiurno
+  - action: utter_turnoDiurno  
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: turnos path 2
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: turnosMenu
+  - action: utter_turnosMenu
+  - intent: turnoSabatino
+  - action: utter_turnoSabatino
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: turnos path 3
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: turnosMenu
+  - action: utter_turnosMenu
+  - intent: nocturnoPresencial
+  - action: utter_nocturnoPresencial
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: turnos path 4
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: turnosMenu
+  - action: utter_turnosMenu
+  - intent: nocturnoOnline
+  - action: utter_nocturnoOnline
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+
+- story: pagos path 1
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: pagosMenu
+  - action: utter_pagosMenu
+  - intent: lunesAViernes
+  - action: utter_lunesAViernes
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: pagos path 2
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: pagosMenu
+  - action: utter_pagosMenu
+  - intent: sabatino
+  - action: utter_sabatino
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: direccion path
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: direccion
+  - action: utter_direccion
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: carreras path
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: carreras
+  - action: utter_carreras
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: licenciaturaIngenieria path
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: licenciaturaIngenieria
+  - action: utter_licenciaturaIngenieria
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: egresados path
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: egresados
+  - action: utter_egresados
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: diplomado path
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: diplomado
+  - action: utter_diplomadoMarketing
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: cursos path 
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: cursosDiplomados
+  - action: utter_cursosDiplomados
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: reincorporacion path
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: reincorporacion
+  - action: utter_reincorporacion
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- story: solicitud de grado path
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+  - intent: solicitudGrado
+  - action: utter_solicitudDeGrado
+  - intent: greetMenu
+  - action: utter_greetMenu

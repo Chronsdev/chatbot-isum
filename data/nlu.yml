@@ -1,0 +1,113 @@
+version: "3.1"
+
+nlu:
+- intent: greetMenu 
+  examples: |
+    - hey
+    - hola
+    - /start 
+
+- intent: inscripcionesMenu
+  examples: |
+    - inscripciones
+    - informacion de las inscripciones 
+
+
+- intent: inscripciones
+  examples: |
+    - cua
+    - byea
+
+
+- intent: requisitosDeInscripcion
+  examples: |
+    - como me inscribo?
+    - como me inscribo 
+    - requisitos para inscribirme
+    - que hay que hacer para inscribirse 
+    - que hay que hacer para inscribirse?
+
+- intent: turnosMenu
+  examples: |
+    - turnos
+    - turnos del isum 
+
+
+- intent: turnoDiurno
+  examples: |
+    - turno diurno
+    - turno semanal
+
+- intent: turnoSabatino
+  examples: |
+    - turno los sabados
+    - turno los fines de semana 
+
+
+- intent: nocturnoPresencial
+  examples: |
+    - turno nocturno
+    - turno en la noche 
+    - turno noche 
+
+
+- intent: nocturnoOnline
+  examples: |
+    - turno online nocturno
+    - turno en la noche online
+    - turno online 
+
+
+- intent: pagosMenu
+  examples: |
+    - como son los pagos 
+    - como son los pagos?
+
+- intent: lunesAViernes
+  examples: |
+    - lunes a viernes 
+    - dias de semana 
+
+
+- intent: sabatino
+  examples: |
+    - fin de semana 
+
+- intent: direccion
+  examples: |
+    - donde queda?
+    - donde quedan?
+    - donde se ubican?
+    
+- intent: carreras
+  examples: |
+    - que carreras hay?
+    - que carreras hay disponible?
+    - carreras
+
+
+- intent: licenciaturaIngenieria
+  examples: |
+    - licenciatura 
+    - ingenieria 
+
+- intent: egresados
+  examples: |
+    - egresados 
+
+- intent: diplomado
+  examples: |
+    - diplomado
+
+- intent: cursosDiplomados
+  examples: |
+    - cursos 
+
+- intent: reincorporacion
+  examples: |
+    - reincorporacion
+    
+
+- intent: solicitudGrado
+  examples: |
+    - solicitudGrado

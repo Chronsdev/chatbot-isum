@@ -1,0 +1,107 @@
+version: "3.1"
+
+rules:
+
+- rule: Mostrar menu principal
+  steps:
+  - intent: greetMenu
+  - action: utter_greetMenu
+
+- rule: inscripciones menu 
+  steps: 
+  - intent: inscripcionesMenu
+  - action: utter_inscripcionesMenu
+
+- rule: inscripciones informacion 
+  steps: 
+  - intent: inscripciones
+  - action: utter_inscripciones
+
+
+- rule: inscripciones requisitos
+  steps: 
+  - intent: requisitosDeInscripcion
+  - action: utter_requisitosDeInscripcion
+
+
+- rule: turno menu 
+  steps: 
+  - intent: turnosMenu
+  - action: utter_turnosMenu
+
+- rule: turno diurno
+  steps: 
+  - intent: turnoDiurno
+  - action: utter_turnoDiurno
+
+
+- rule: turno sabatino
+  steps: 
+  - intent: turnoSabatino
+  - action: utter_turnoSabatino
+
+- rule: turno nocturno presencial
+  steps: 
+  - intent: nocturnoPresencial
+  - action: utter_nocturnoPresencial
+
+
+- rule: turno nocturno online
+  steps: 
+  - intent: nocturnoOnline
+  - action: utter_nocturnoOnline
+
+- rule: pago menu
+  steps: 
+  - intent: pagosMenu
+  - action: utter_pagosMenu
+
+- rule: pago lunes a viernes
+  steps: 
+  - intent: lunesAViernes
+  - action: utter_lunesAViernes
+
+- rule: pago sabatino
+  steps: 
+  - intent: sabatino
+  - action: utter_sabatino
+
+- rule: direccion
+  steps: 
+  - intent: direccion
+  - action: utter_direccion
+
+- rule: carreras
+  steps: 
+  - intent: carreras
+  - action: utter_carreras
+
+- rule: licenciatura e Ingenieria
+  steps: 
+  - intent: licenciaturaIngenieria
+  - action: utter_licenciaturaIngenieria
+
+- rule: egresados
+  steps: 
+  - intent: egresados
+  - action: utter_egresados
+
+- rule: diplomado
+  steps: 
+  - intent: diplomado
+  - action: utter_diplomadoMarketing
+
+- rule: cursos
+  steps: 
+  - intent: cursosDiplomados
+  - action: utter_cursosDiplomados
+
+- rule: reincorporacion
+  steps: 
+  - intent: reincorporacion
+  - action: utter_reincorporacion
+
+- rule: solicitud de Grado
+  steps: 
+  - intent: solicitudGrado
+  - action: utter_solicitudDeGrado

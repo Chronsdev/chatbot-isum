@@ -1,0 +1,10 @@
+# Entorno virtual
+.env 
+env/
+
+# modelos
+models/
+test/ 
+
+#cache
+__pycache__

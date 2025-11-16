@@ -1,0 +1,276 @@
+version: "3.1"
+
+intents:
+  - greetMenu
+  - inscripcionesMenu
+  - inscripciones
+  - requisitosDeInscripcion
+  - turnosMenu
+  - turnoDiurno
+  - turnoSabatino
+  - nocturnoPresencial
+  - nocturnoOnline
+  - pagosMenu
+  - lunesAViernes
+  - sabatino
+  - direccion
+  - carreras
+  - licenciaturaIngenieria
+  - egresados
+  - diplomado
+  - cursosDiplomados
+  - reincorporacion
+  - solicitudGrado
+
+responses:
+  utter_greetMenu:
+  - custom:
+      text: "¡Hola! Bienvenido al asistente administrativo del ISUM. Selecciona una categoría para comenzar:"
+      reply_markup:
+        inline_keyboard:
+          - [ { text: "📋 Inscripciones", callback_data: "/inscripcionesMenu" } ]
+          - [ { text: "🕒 Turnos académicos", callback_data: "/turnosMenu" } ]
+          - [ { text: "💰 Pagos", callback_data: "/pagosMenu" } ]
+          - [ { text: "🎓 Carreras y estudios", callback_data: "/carrerasMenu" } ]
+          - [ { text: "📍 Ubicación y contacto", callback_data: "/direccion" } ]
+
+
+  utter_inscripcionesMenu:
+  - custom:
+      text: "Selecciona una opción sobre inscripciones:"
+      reply_markup:
+        inline_keyboard:
+          - [ { text: "Fechas y proceso", callback_data: "/inscripciones" } ]
+          - [ { text: "Requisitos", callback_data: "/requisitosDeInscripcion" } ]
+          - [ { text: "Reincorporación", callback_data: "/reincorporacion" } ]
+          - [ { text: "Solicitud de grado", callback_data: "/solicitudGrado" } ]
+
+
+  utter_turnosMenu:
+  - custom:
+      text: "Selecciona el turno que te interesa:"
+      reply_markup:
+        inline_keyboard:
+          - [ { text: "Diurno presencial", callback_data: "/turnoDiurno" } ]
+          - [ { text: "Sabatino presencial", callback_data: "/turnoSabatino" } ]
+          - [ { text: "Nocturno presencial", callback_data: "/nocturnoPresencial" } ]
+          - [ { text: "Nocturno online", callback_data: "/nocturnoOnline" } ]
+
+
+  utter_pagosMenu:
+  - custom:
+      text: "Selecciona el plan de pago según tu turno:"
+      reply_markup:
+        inline_keyboard:
+          - [ { text: "Lunes a viernes", callback_data: "/lunesAViernes" } ]
+          - [ { text: "Sabatino", callback_data: "/sabatino" } ]
+
+  utter_carrerasMenu:
+  - custom:
+      text: "Explora nuestras opciones académicas:"
+      reply_markup:
+        inline_keyboard:
+          - [ { text: "Carreras TSU", callback_data: "/carreras" } ]
+          - [ { text: "Licenciatura e Ingeniería", callback_data: "/licenciaturaIngenieria" } ]
+          - [ { text: "Diplomado Marketing", callback_data: "/diplomado" } ]
+          - [ { text: "Cursos y diplomados", callback_data: "/cursosDiplomados" } ]
+          - [ { text: "Egresados", callback_data: "/egresados" } ]
+
+  utter_inscripciones:
+  - text: "Inscripciones abiertas periodo 2025-3. Inicio de clases: 9 de septiembre"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_requisitosDeInscripcion:
+  - text: "https://isum.com.ve/alumnos-nuevos/"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_turnoDiurno:
+  - text: "Diurno presencial: (seis periodos académicos): De lunes a viernes de 8:30 a.m a 12:30 p.m. Clases completamente presenciales"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_turnoSabatino:
+  - text: "Sabatino presencial: (diez periodos académicos): Sábados de 8 a.m a 4 p.m. Multimodal, clases  presenciales con apoyo tecnológico. El turno sabatino tiene un precio especial Aprovecha"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_nocturnoPresencial:
+  - text: "Nocturno presencial: (seis periodos académicos): De lunes a viernes de 5:30 p.m a 8:10 p.m. Multimodal, clases presenciales con apoyo tecnológico "
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_nocturnoOnline:
+  - text: "Nocturno Online: (seis periodos académicos): De lunes a viernes de 5:30 a.m a 9:40 p.m. Multimodal, clases online con apoyo presencial (si aplica) Nota: Toma en cuenta que, para cursar el turno nocturno online, debes contar con una  computadora preferiblemente, una conexión a internet, teléfono movil o tableta, así como los accesorios necesarios para conectarte a una videollamada."
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_lunesAViernes:
+  - text: | 
+      "De contando: $410 (no pagas más hasta diciembre 2025) 
+       financiado: $455 $290 de inicial al momento de inscripción 
+       $55 1ra cuota septiembre 
+       $55 2da cuota octubre $55 3ra cuota noviembre
+       https://isum.com.ve/inscripciones/"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu        
+
+  utter_sabatino:
+  - text: |
+      "De contando: $300 (no pagas más hasta diciembre 2025) 
+      financiado: $340 
+      $250 de inicial al momento de inscripción 
+      $30 1ra cuota septiembre 
+      $30 2da cuota octubre 
+      $30 3ra cuota noviembre
+      https://isum.com.ve/inscripciones/"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_direccion:
+  - text: "Estamos ubicados en la AV. Casanova, media cuadra antes del CC El Recreo, frente a la torre del Banco Plaza, al lado del Meliá Caracas, Caracas Venezuela"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_carreras:
+  - text: | 
+        "Estas son las carreras que tenemos disponibles.
+
+        TSU:
+
+        Mercadotecnia (en las menciones)
+        - Publicidad
+        - Comercialización
+        - Ventas
+
+        Administración (menciones)
+        - Recursos humanos
+        - Organización y Sistemas
+
+        Informática
+        Contaduría
+        Gestión fiscal y Tributaria
+
+        Consulta la descripción de cada carrera y descarga el plan de estudios de cada una:
+        https://isum.com.ve/carreras/"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_licenciaturaIngenieria:
+  - text: | 
+      "Licenciatura en Contaduria Publica
+
+       Licenciatura en Administración mención: Relaciones Industriales
+
+       Licenciatura en Administración mención: Gerencia y Mercadeo
+
+       Ingeniera de Computación
+
+       Consulta más información sobre las licenciaturas https://isum.com.ve/convenio-licenciatura/"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_egresados:
+  - text: "Si desea comunicarse con la coordinadora de Egresados, la Prof. Nancy Betancourt, por favor enviar su número telefónico para ponernos en contanto con usted"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_diplomadoMarketing:
+  - text: | 
+      "Toda la información sobre el Diplomado de Marketing Digital y Redes Sociales
+       https://isumxtension.com.ve/7655-2/
+       Plan de contado 320$
+
+       Para información más detallada escribe a través del número de Whatsapp 
+       +58 424-2806300/+58 424-1397966"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_licenciatura:
+  - text: |
+      "Impulsa tu futuro profesional
+
+       Inicio de clases: 5 de septiembre
+
+       Charla informativa presencial viernes 15 de agosto de 4 a 5 p.m
+
+       ISUM Y UNIOJEDA se unen para ofrecerte la oportunidad de continuar tus estudios de
+       licenciatura e ingeniería para los egresados TSU. Egresados ISUM y de otros institutos,
+       ésta es tu oportunidad"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_cursosDiplomados:
+  - text: |
+      "Consulta la página web de nuestro Centro de Extensión Universitario, donde encontrarás
+       nuestra oferta de diplomados, cursos y talleres. isumextension.com.ve
+
+       Cuenta Instagram @CEU_isum
+
+       Correo isumextension@gmail.com
+
+       Número de Whatsapp de la coordinación de extensión +58 424-1397966"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_reincorporacion:
+  - text: |
+      "Inscripciones abiertas reincorporaciones periodo 2025-3. Inicio de clases: 9 de septiembre
+
+       Monto de contado: Turnos Lun a Vie (diurno, multimodal y online): 410$, 
+       Sabatino: 300$ (solo el 1er y 2do periodo). Más información sobre el plan financiado:
+       https://isum.com.ve/inscripciones/
+
+       Toda la información sobre la reincorporación: 
+       https://isum.com.ve/nivelaciones-y-reincorporacion/
+
+       Puedes escribir al número de whatsapp +58 424-1519291
+
+       Te esperamos"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_solicitudDeGrado:
+  - text: | 
+      "+2 planilla de solicitud de Acto de Grado y compromiso de actividades de grado
+
+       +cédula de identidad vigente y legible, con visita a la original: 1 fotocopia a color tamaño
+       normal y 1 fotocopia blanco y negro ampliada tamaño 10x15cm
+
+       +Certificado SNI (Sistema Nacional de Ingreso)
+
+       +Partida de nacimiento: Original en perfecto estado, 1 fotocopia clara y legible
+
+       +Arancel de solicitud de grado
+
+       +Notas de certificado desde 1er año hasta 5to año del ciclo diversificado o educación
+       media técnica: original en formato actualizado con los timbres fiscales inutilizados. Una
+       fotocopia simple por ambas caras, autenticadas por el liceo (la autenticación por el
+       reverso)
+
+       +Titulo de bachiller: original con timbres fiscales inutilizados. Una fotocopia simple por
+       ambas caras, autenticadas por el liceo (la autentificación por el reverso)
+
+       La planilla de solicitud de grado y compromiso de actividades debe llenarse antes de 
+       imprimirse"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
