@@ -5,4 +5,8 @@ load_dotenv()
 
 port = os.environ.get("PORT", "5005")
 
-rasa.run(enable_api=True, port=int(port))
+# Entrenar antes de arrancar
+os.system("rasa train")
+
+# Arrancar el servidor con el modelo recién entrenado
+os.system(f"rasa run --enable-api --port {port}")
