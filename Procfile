@@ -1,1 +1,1 @@
-web: python run_bot.py
+web: rasa run --enable-api --port $PORT
