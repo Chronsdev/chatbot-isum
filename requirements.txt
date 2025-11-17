@@ -1,7 +1,6 @@
 absl-py==1.4.0
 aio-pika==8.2.3
 aiofiles==24.1.0
-aiogram
 aiohttp
 aiohttp-retry
 aiormq==6.4.2
