@@ -6,4 +6,4 @@ COPY . /app
 
 RUN rasa train
 
-CMD ["rasa", "run", "--enable-api", "--port", "8080", "--cors", "*"]
+CMD ["rasa", "run", "--enable-api", "--port", "$PORT", "--cors", "*"]
