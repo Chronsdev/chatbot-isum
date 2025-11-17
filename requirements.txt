@@ -1,7 +1,10 @@
 rasa==3.6.21
 rasa-sdk==3.6.2
 python-dotenv
-aiohttp==3.8.5
-aiohttp-retry==2.8.3
-sanic==21.12.1
-uvloop==0.17.0
+aiohttp>=3.9,<3.10
+aiohttp-retry
+sanic>=21.0.0,<22.0.0
+uvloop>=0.16.0,<0.18.0
+sqlalchemy<2.0.0
+rocketchat-API==0.6.36
+colorama<0.4.5
