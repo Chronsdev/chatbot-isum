@@ -4,6 +4,7 @@ env/
 
 # modelos
 test/ 
+models/
 
 #cache
 __pycache__
