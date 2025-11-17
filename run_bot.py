@@ -5,7 +5,5 @@ load_dotenv()
 
 port = os.environ.get("PORT", "5005")
 
-model_path = "models"  
-endpoints_path = "endpoints.yml"  
-
-rasa.run(model=model_path, endpoints=endpoints_path, enable_api=True, port=port)
+# Arrancar el servidor con el modelo recién entrenado
+os.system(f"rasa run --enable-api --port {port}")
