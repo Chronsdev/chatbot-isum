@@ -1,0 +1,7 @@
+env 
+.env
+tests 
+.gitignore
+requirements.txt 
+runtime.txt 
+run_bot.py

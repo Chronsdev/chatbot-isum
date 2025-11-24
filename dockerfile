@@ -1,9 +1,15 @@
 FROM rasa/rasa:latest
 
-WORKDIR /app
+# Usar un directorio diferente al de la imagen base
+WORKDIR /workspace
 
-COPY . /app
+COPY . /workspace
 
-RUN rasa train
+# Cambiar permisos en nuestro directorio (no en /app)
+USER root
+RUN chown -R rasa:rasa /workspace && \
+    chmod -R 755 /workspace
+USER rasa
 
-CMD ["rasa", "run", "--enable-api", "--port", "$PORT", "--cors", "*"]
+ENTRYPOINT []
+CMD ["sh", "-c", "rasa train && rasa run --enable-api --port $PORT --cors '*'"]
