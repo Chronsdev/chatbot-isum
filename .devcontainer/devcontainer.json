@@ -1,0 +1,6 @@
+{
+  "name": "Rasa Docker Dev",
+  "features": {
+    "docker-in-docker": "latest"
+  }
+}
