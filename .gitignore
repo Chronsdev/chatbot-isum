@@ -6,6 +6,7 @@ env/
 .rasa/cache/
 test/ 
 run_bot.py
+models/
 
 #cache
 __pycache__
