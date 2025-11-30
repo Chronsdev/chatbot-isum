@@ -62,7 +62,9 @@ responses:
       text: "Selecciona el plan de pago según tu turno:"
       reply_markup:
         inline_keyboard:
-          - [ { text: "Lunes a viernes", callback_data: "/lunesAViernes" } ]
+          - [ { text: "Turno Diurno", callback_data: "/lunesAViernes" } ]
+          - [ { text: "Turno Nocturno Presencial", callback_data: "/nocturnoPresencial" } ]
+          - [ { text: "Turno Nocturno Online", callback_data: "/nocturnoOnline" } ]
           - [ { text: "Sabatino", callback_data: "/sabatino" } ]
 
   utter_carrerasMenu:
@@ -72,7 +74,7 @@ responses:
         inline_keyboard:
           - [ { text: "Carreras TSU", callback_data: "/carreras" } ]
           - [ { text: "Licenciatura e Ingeniería", callback_data: "/licenciaturaIngenieria" } ]
-          - [ { text: "Diplomado Marketing", callback_data: "/diplomado" } ]
+          - [ { text: "Diplomado Marketing", callback_data: "/diplomadoMarketing" } ]
           - [ { text: "Cursos y diplomados", callback_data: "/cursosDiplomados" } ]
           - [ { text: "Egresados", callback_data: "/egresados" } ]
 
@@ -101,23 +103,39 @@ responses:
       payload: /greetMenu 
 
   utter_nocturnoPresencial:
-  - text: "Nocturno presencial: (seis periodos académicos): De lunes a viernes de 5:30 p.m a 8:10 p.m. Multimodal, clases presenciales con apoyo tecnológico "
+  - text: | 
+      "Nocturno presencial: (seis periodos académicos): De lunes a viernes de 5:30 p.m a 8:10 p.m. Multimodal, clases presenciales con apoyo tecnológico
+       De contando: $440 (no pagas más hasta diciembre 2025) 
+       financiado: $300 de inicial al momento de inscripción 
+       $65 1ra cuota 13/02/2026 
+       $60 2da cuota 16/03/2026 
+       $60 3ra cuota 15/04/2026
+       https://isum.com.ve/inscripciones/"
     buttons:
     - title: "Hacer mas preguntas administrativas"
       payload: /greetMenu 
 
   utter_nocturnoOnline:
-  - text: "Nocturno Online: (seis periodos académicos): De lunes a viernes de 5:30 a.m a 9:40 p.m. Multimodal, clases online con apoyo presencial (si aplica) Nota: Toma en cuenta que, para cursar el turno nocturno online, debes contar con una  computadora preferiblemente, una conexión a internet, teléfono movil o tableta, así como los accesorios necesarios para conectarte a una videollamada."
+  - text: | 
+      "Nocturno Online: (seis periodos académicos): De lunes a viernes de 5:30 a.m a 9:40 p.m. Multimodal, clases online con apoyo presencial (si aplica) Nota: Toma en cuenta que, para cursar el turno nocturno online, debes contar con una  computadora preferiblemente, una conexión a internet, teléfono movil o tableta, así como los accesorios necesarios para conectarte a una videollamada.
+       De contando: $440 (no pagas más hasta diciembre 2025) 
+       financiado: $300 de inicial al momento de inscripción 
+       $65 1ra cuota 13/02/2026 
+       $60 2da cuota 16/03/2026 
+       $60 3ra cuota 15/04/2026
+       https://isum.com.ve/inscripciones/"
     buttons:
     - title: "Hacer mas preguntas administrativas"
       payload: /greetMenu 
 
   utter_lunesAViernes:
   - text: | 
-      "De contando: $410 (no pagas más hasta diciembre 2025) 
-       financiado: $455 $290 de inicial al momento de inscripción 
-       $55 1ra cuota septiembre 
-       $55 2da cuota octubre $55 3ra cuota noviembre
+      "Diurno presencial: (seis periodos académicos): De lunes a viernes de 8:30 a.m a 12:30 p.m. Clases completamente presenciales
+       De contando: $440 (no pagas más hasta diciembre 2025) 
+       financiado: $300 de inicial al momento de inscripción 
+       $65 1ra cuota 13/02/2026 
+       $60 2da cuota 16/03/2026 
+       $60 3ra cuota 15/04/2026
        https://isum.com.ve/inscripciones/"
     buttons:
     - title: "Hacer mas preguntas administrativas"
@@ -125,7 +143,8 @@ responses:
 
   utter_sabatino:
   - text: |
-      "De contando: $300 (no pagas más hasta diciembre 2025) 
+     "Sabatino presencial: (diez periodos académicos): Sábados de 8 a.m a 4 p.m. Multimodal, clases  presenciales con apoyo tecnológico. El turno sabatino tiene un precio especial Aprovecha
+      De contando: $300 (no pagas más hasta diciembre 2025) 
       financiado: $340 
       $250 de inicial al momento de inscripción 
       $30 1ra cuota septiembre 
@@ -137,7 +156,9 @@ responses:
       payload: /greetMenu 
 
   utter_direccion:
-  - text: "Estamos ubicados en la AV. Casanova, media cuadra antes del CC El Recreo, frente a la torre del Banco Plaza, al lado del Meliá Caracas, Caracas Venezuela"
+  - text: |
+     "Estamos ubicados en la AV. Casanova, media cuadra antes del CC El Recreo, frente a la torre del Banco Plaza, al lado del Meliá Caracas, Caracas Venezuela:
+     https://www.google.com/maps/place/Instituto+Universitario+de+Mercadotecnia+ISUM/@10.49322,-66.87833,2257m/data=!3m1!1e3!4m6!3m5!1s0x8c2a58e068fcf2ab:0xed39035c266cbf3e!8m2!3d10.49322!4d-66.87833!16s%2Fg%2F1tznnc_c?hl=es-419&entry=ttu&g_ep=EgoyMDI1MTEyMy4xIKXMDSoASAFQAw%3D%3D"
     buttons:
     - title: "Hacer mas preguntas administrativas"
       payload: /greetMenu 

@@ -7,11 +7,6 @@
 #  url: http://my-server.com/models/default_core@latest
 #  wait_time_between_pulls:  10   # [optional](default: 100)
 
-webhook_telegram:
-  access_token: "7998031573:AAG11yGZkvEj9FerBD-iMFxasKV_aMj6Vuc"
-  verify: "ISUMadministrativo_bot"
-  webhook_url: "https://dacb7d3f94b4.ngrok-free.app/webhooks/telegram/webhook"
-
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
 

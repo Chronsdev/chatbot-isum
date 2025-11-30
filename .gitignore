@@ -3,8 +3,9 @@
 env/
 
 # modelos
+.rasa/cache/
 test/ 
-models/
+
 
 #cache
 __pycache__
