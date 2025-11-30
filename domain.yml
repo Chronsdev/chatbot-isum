@@ -78,7 +78,6 @@ responses:
         inline_keyboard:
           - [ { text: "Carreras TSU", callback_data: "/carreras" } ]
           - [ { text: "Licenciatura e Ingeniería", callback_data: "/licenciaturaIngenieria" } ]
-          - [ { text: "Diplomado Marketing", callback_data: "/diplomadoMarketing" } ]
           - [ { text: "Cursos y diplomados", callback_data: "/cursosDiplomados" } ]
           - [ { text: "Egresados", callback_data: "/egresados" } ]
 
