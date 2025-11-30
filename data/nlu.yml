@@ -111,3 +111,15 @@ nlu:
 - intent: solicitudGrado
   examples: |
     - solicitudGrado
+
+- intent: carrerasMenu
+  examples: |
+    - Carreras y mas 
+
+- intent: turnoNocturnoPresencial
+  examples: |
+    - Turno nocturno presencial
+
+- intent: turnoNocturnoOnline
+  examples: |
+    - Turno nocturno online

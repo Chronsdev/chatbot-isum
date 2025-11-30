@@ -105,3 +105,18 @@ rules:
   steps: 
   - intent: solicitudGrado
   - action: utter_solicitudDeGrado
+
+- rule: carreras menu
+  steps: 
+  - intent: carrerasMenu
+  - action: utter_carrerasMenu
+
+- rule: turno nocturno presencial
+  steps: 
+  - intent: turnoNocturnoPresencial
+  - action: utter_turnoNocturnoPresencial
+
+- rule: turno nocturno online
+  steps: 
+  - intent: turnoNocturnoOnline
+  - action: utter_turnoNocturnoOnline

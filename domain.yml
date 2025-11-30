@@ -22,6 +22,9 @@ intents:
   - reincorporacion
   - solicitudGrado
   - carrerasMenu
+  - turnoNocturnoPresencial
+  - turnoNocturnoOnline
+
 
 responses:
   utter_greetMenu:
