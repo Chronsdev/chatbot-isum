@@ -5,7 +5,7 @@ env/
 # modelos
 .rasa/cache/
 test/ 
-
+run_bot.py
 
 #cache
 __pycache__

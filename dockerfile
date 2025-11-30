@@ -7,4 +7,4 @@ COPY . /workspace
 
 
 ENTRYPOINT []
-CMD ["sh", "-c", "rasa run --enable-api --port $PORT --cors '*'"]
+CMD ["sh", "-c", "rasa run --enable-api --model models/20251130-182922-grim-backlist.tar.gz --port $PORT --cors '*'"]
