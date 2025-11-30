@@ -21,6 +21,7 @@ intents:
   - cursosDiplomados
   - reincorporacion
   - solicitudGrado
+  - carrerasMenu
 
 responses:
   utter_greetMenu:
@@ -53,8 +54,8 @@ responses:
         inline_keyboard:
           - [ { text: "Diurno presencial", callback_data: "/turnoDiurno" } ]
           - [ { text: "Sabatino presencial", callback_data: "/turnoSabatino" } ]
-          - [ { text: "Nocturno presencial", callback_data: "/nocturnoPresencial" } ]
-          - [ { text: "Nocturno online", callback_data: "/nocturnoOnline" } ]
+          - [ { text: "Nocturno presencial", callback_data: "/turnoNocturnoPresencial" } ]
+          - [ { text: "Nocturno online", callback_data: "/turnoNocturnoOnline" } ]
 
 
   utter_pagosMenu:
@@ -79,7 +80,7 @@ responses:
           - [ { text: "Egresados", callback_data: "/egresados" } ]
 
   utter_inscripciones:
-  - text: "Inscripciones abiertas periodo 2025-3. Inicio de clases: 9 de septiembre"
+  - text: "Inscripciones abiertas periodo 2026-1. Inicio de clases: enero de 2026"
     buttons:
     - title: "Hacer mas preguntas administrativas"
       payload: /greetMenu 
@@ -102,10 +103,22 @@ responses:
     - title: "Hacer mas preguntas administrativas"
       payload: /greetMenu 
 
+  utter_turnoNocturnoPresencial:
+  - text: "Nocturno presencial: (seis periodos académicos): De lunes a viernes de 5:30 p.m a 8:10 p.m. Multimodal, clases presenciales con apoyo tecnológico"
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
+  utter_turnoNocturnoOnline:
+  - text: "Nocturno Online: (seis periodos académicos): De lunes a viernes de 5:30 a.m a 9:40 p.m. Multimodal, clases online con apoyo presencial (si aplica) Nota: Toma en cuenta que, para cursar el turno nocturno online, debes contar con una  computadora preferiblemente, una conexión a internet, teléfono movil o tableta, así como los accesorios necesarios para conectarte a una videollamada."
+    buttons:
+    - title: "Hacer mas preguntas administrativas"
+      payload: /greetMenu 
+
   utter_nocturnoPresencial:
   - text: | 
       "Nocturno presencial: (seis periodos académicos): De lunes a viernes de 5:30 p.m a 8:10 p.m. Multimodal, clases presenciales con apoyo tecnológico
-       De contando: $440 (no pagas más hasta diciembre 2025) 
+       De contando: $440 
        financiado: $300 de inicial al momento de inscripción 
        $65 1ra cuota 13/02/2026 
        $60 2da cuota 16/03/2026 
@@ -118,7 +131,7 @@ responses:
   utter_nocturnoOnline:
   - text: | 
       "Nocturno Online: (seis periodos académicos): De lunes a viernes de 5:30 a.m a 9:40 p.m. Multimodal, clases online con apoyo presencial (si aplica) Nota: Toma en cuenta que, para cursar el turno nocturno online, debes contar con una  computadora preferiblemente, una conexión a internet, teléfono movil o tableta, así como los accesorios necesarios para conectarte a una videollamada.
-       De contando: $440 (no pagas más hasta diciembre 2025) 
+       De contando: $440 
        financiado: $300 de inicial al momento de inscripción 
        $65 1ra cuota 13/02/2026 
        $60 2da cuota 16/03/2026 
@@ -131,7 +144,7 @@ responses:
   utter_lunesAViernes:
   - text: | 
       "Diurno presencial: (seis periodos académicos): De lunes a viernes de 8:30 a.m a 12:30 p.m. Clases completamente presenciales
-       De contando: $440 (no pagas más hasta diciembre 2025) 
+       De contando: $440 
        financiado: $300 de inicial al momento de inscripción 
        $65 1ra cuota 13/02/2026 
        $60 2da cuota 16/03/2026 
@@ -144,12 +157,11 @@ responses:
   utter_sabatino:
   - text: |
      "Sabatino presencial: (diez periodos académicos): Sábados de 8 a.m a 4 p.m. Multimodal, clases  presenciales con apoyo tecnológico. El turno sabatino tiene un precio especial Aprovecha
-      De contando: $300 (no pagas más hasta diciembre 2025) 
-      financiado: $340 
-      $250 de inicial al momento de inscripción 
-      $30 1ra cuota septiembre 
-      $30 2da cuota octubre 
-      $30 3ra cuota noviembre
+      De contando: $320 
+      financiado: $260
+      $35 1ra cuota 13/02/2026
+      $35 2da cuota 16/03/2026
+      $30 3ra cuota 15/04/2026
       https://isum.com.ve/inscripciones/"
     buttons:
     - title: "Hacer mas preguntas administrativas"
@@ -225,7 +237,7 @@ responses:
   - text: |
       "Impulsa tu futuro profesional
 
-       Inicio de clases: 5 de septiembre
+       Inicio de clases: enero de 2026
 
        Charla informativa presencial viernes 15 de agosto de 4 a 5 p.m
 
@@ -252,7 +264,7 @@ responses:
 
   utter_reincorporacion:
   - text: |
-      "Inscripciones abiertas reincorporaciones periodo 2025-3. Inicio de clases: 9 de septiembre
+      "Inscripciones abiertas reincorporaciones periodo 2026-1. Inicio de clases: enero de 2026
 
        Monto de contado: Turnos Lun a Vie (diurno, multimodal y online): 410$, 
        Sabatino: 300$ (solo el 1er y 2do periodo). Más información sobre el plan financiado:
